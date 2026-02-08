@@ -1,0 +1,146 @@
+source_ip,timestamp,destination,port,payload_type,payload,label,attack_type
+172.20.10.4,2026-02-07T09:30:10Z,support@corp.com,8080,text,Ticket #9921: User cannot access VPN. Priority: Low.,benign,support_ticket
+192.168.0.10,2026-02-07T12:05:40Z,sales@corp.com,443,link,https://hubspot.com/contacts,benign,safe_link
+203.0.113.45,2026-02-07T11:06:00Z,user@corp.com,25,text,URGENT: Your account will be suspended in 24 hours. Verify now: http://account-verify-now.com/login,malicious,credential_harvest
+55.11.22.33,2026-02-07T09:32:45Z,legal@corp.com,443,link,https://vx-underground.org/Samples,malicious,credential_harvest
+192.0.2.34,2026-02-07T11:13:00Z,legal@corp.com,443,link,https://netflix-billing-update.com/payment?email=user@corp.com,malicious,invoice_fraud
+10.0.0.12,2026-02-07T14:02:30Z,it@corp.com,443,video,https://www.youtube.com/watch?v=vaeFzrIc9HU | [AI SUMMARY]: Microsoft Teams Core Features Explained. Training video.,benign,safe_link
+192.168.1.18,2026-02-07T11:45:35Z,devops@corp.com,22,text,Deploying hotfix to US-East-1.,benign,dev_notification
+44.33.22.11,2026-02-07T11:12:55Z,ceo@corp.com,587,text,"I need you to buy 5x $100 Apple Gift Cards for a client gift. Do not call me, I am in a meeting.",malicious,invoice_fraud
+198.51.100.90,2026-02-07T11:15:00Z,ceo@corp.com,443,image,fake_invoice.jpg | OCR: 'URGENT: Payment overdue. Click here to pay: pay-now-fake.com',malicious,invoice_fraud
+198.51.100.33,2026-02-07T12:45:00Z,dev@corp.com,443,pdf,https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf | Metadata: Technical Manual - PDF Bookmarks Sample,benign,safe_attachment
+99.88.77.66,2026-02-07T13:28:30Z,sysadmin@corp.com,23,text,"Microsoft Security Alert: We detected a login from 'iPhone 15 - Chengdu, China'. Reply STOP to block this device immediately.",malicious,credential_harvest
+192.168.1.25,2026-02-07T10:50:20Z,dev@corp.com,443,text,Merged PR #501 to main branch. Tests passed.,benign,dev_notification
+55.11.22.33,2026-02-07T13:22:45Z,legal@corp.com,443,link,https://vx-underground.org/Samples,malicious,credential_harvest
+192.168.1.50,2026-02-07T13:30:12Z,intern@corp.com,443,video,https://www.youtube.com/watch?v=k1VUZEVuDJ8 | [AI SUMMARY]: Excel Tutorial for Beginners. Safe educational content.,benign,safe_link
+23.45.67.89,2026-02-07T13:42:30Z,dev@corp.com,143,image,"aws_bill_fake.png | OCR: 'AWS INVOICE: $15,400.00 USD - AUTO-DEBIT SCHEDULED FOR TOMORROW'",malicious,invoice_fraud
+12.34.56.78,2026-02-07T13:32:00Z,cfo@corp.com,53,link,https://datalake.abuse.ch/malware-bazaar/daily/,malicious,invoice_fraud
+10.2.3.8,2026-02-07T11:10:40Z,qa@corp.com,443,link,https://jira.corp.com/browse/BUG-202,benign,safe_link
+23.55.66.77,2026-02-07T11:48:50Z,finance@corp.com,993,text,FW: Overdue Invoice #9922. Please pay immediately to avoid legal action.,malicious,invoice_fraud
+192.168.0.5,2026-02-07T09:22:00Z,sales@corp.com,443,link,https://docs.google.com/presentation/d/12345,benign,safe_link
+192.168.1.77,2026-02-07T12:25:50Z,user@corp.com,443,link,https://stackoverflow.com/questions/12345,benign,safe_link
+203.0.113.123,2026-02-07T11:11:00Z,sales@corp.com,443,link,https://bit.ly/suspicious-link-2024,malicious,credential_harvest
+88.44.22.11,2026-02-07T11:42:20Z,cfo@corp.com,443,link,https://irs-tax-refund-claim.com,malicious,credential_harvest
+192.168.1.33,2026-02-07T11:28:40Z,dev@corp.com,8080,text,API Latency is high on prod.,benign,dev_notification
+192.168.1.100,2026-02-07T14:12:10Z,qa@corp.com,443,pdf,https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf | Metadata: Standard W3C Test PDF,benign,safe_attachment
+98.76.54.32,2026-02-07T09:58:00Z,user@corp.com,6667,link,http://freelist.virussign.com/freelist/,malicious,credential_harvest
+45.11.22.33,2026-02-07T14:00:15Z,finance@corp.com,443,video,https://www.youtube.com/watch?v=Xl0DUhuIh0A | [AI SUMMARY]: Robocall detected. Automated voice claiming to be IRS tax enforcement.,malicious,invoice_fraud
+172.16.2.8,2026-02-07T10:30:00Z,it@corp.com,53,text,DNS Zone transfer initiated from unknown IP. Alert.,benign,it_announcement
+10.0.0.12,2026-02-07T10:02:30Z,it@corp.com,443,video,https://www.youtube.com/watch?v=vaeFzrIc9HU | [AI SUMMARY]: Microsoft Teams Core Features Explained. Training video.,benign,safe_link
+203.0.113.8,2026-02-07T13:18:15Z,finance@corp.com,21,link,https://virusshare.com/torrents,malicious,credential_harvest
+10.10.10.10,2026-02-07T13:35:45Z,security@corp.com,8443,text,The weekly vulnerability scan report is available on the Intranet dashboard.,benign,internal_update
+99.88.77.11,2026-02-07T12:00:00Z,all@corp.com,25,text,Free Pizza in the breakroom!,benign,it_announcement
+10.1.1.88,2026-02-07T12:42:45Z,security@corp.com,443,text,Firewall rules updated.,benign,internal_update
+192.168.100.1,2026-02-07T09:50:00Z,manager@corp.com,22,link,https://trello.com/b/project-alpha,benign,safe_link
+10.50.2.22,2026-02-07T10:15:15Z,legal@corp.com,443,pdf,https://www.rd.usda.gov/sites/default/files/pdf-sample_0.pdf | Metadata: Official Government Form USDA,benign,safe_attachment
+172.16.5.4,2026-02-07T09:05:00Z,all@corp.com,53,text,IT Alert: The printer on the 3rd floor is down for maintenance until Tuesday.,benign,it_announcement
+203.0.113.89,2026-02-07T11:09:00Z,hr@corp.com,25,text,"Congratulations! You've won $10,000. Claim your prize now: www.prizewinner.com/claim?id=abc123",malicious,credential_harvest
+66.249.77.11,2026-02-07T10:05:00Z,sales@corp.com,22,audio,https://www.youtube.com/watch?v=Xl0DUhuIh0A | [TRANSCRIPT]: 'IRS Scam Recording (Voicemail).',malicious,delivery_scam
+10.0.0.99,2026-02-07T13:25:00Z,events@corp.com,993,image,holiday_party.png | OCR: 'You are invited! Annual Holiday Party - Friday 6 PM',benign,safe_attachment
+192.168.1.50,2026-02-07T09:40:12Z,intern@corp.com,443,video,https://www.youtube.com/watch?v=k1VUZEVuDJ8 | [AI SUMMARY]: Excel Tutorial for Beginners. Safe educational content.,benign,safe_link
+192.168.0.5,2026-02-07T13:12:00Z,sales@corp.com,443,link,https://docs.google.com/presentation/d/12345,benign,safe_link
+198.51.100.22,2026-02-07T10:20:00Z,dev@corp.com,443,pdf,https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf | Metadata: Technical Manual - PDF Bookmarks Sample,benign,safe_attachment
+23.11.55.9,2026-02-07T13:02:30Z,hr@corp.com,443,video,https://www.youtube.com/watch?v=TUvpL_Hx0is | Context: Corporate stock footage of people in a meeting room.,benign,safe_link
+10.5.1.55,2026-02-07T12:20:20Z,hr@corp.com,443,pdf,https://company-handbook.com/2026-policy.pdf,benign,safe_attachment
+192.168.1.20,2026-02-07T13:00:10Z,devops@corp.com,22,link,https://github.com/org/repo/pull/402,benign,safe_link
+192.168.1.44,2026-02-07T10:32:20Z,sales@corp.com,443,link,https://salesforce.com/login,benign,safe_link
+23.45.67.89,2026-02-07T09:52:30Z,dev@corp.com,143,image,"aws_bill_fake.png | OCR: 'AWS INVOICE: $15,400.00 USD - AUTO-DEBIT SCHEDULED FOR TOMORROW'",malicious,invoice_fraud
+99.88.77.66,2026-02-07T09:38:30Z,sysadmin@corp.com,23,text,"Microsoft Security Alert: We detected a login from 'iPhone 15 - Chengdu, China'. Reply STOP to block this device immediately.",malicious,credential_harvest
+203.0.113.8,2026-02-07T09:28:15Z,finance@corp.com,21,link,https://virusshare.com/torrents,malicious,credential_harvest
+203.0.113.55,2026-02-07T11:08:20Z,finance@corp.com,443,file,https://malicious-site.org/payload.exe | Metadata: Unsigned Executable,malicious,malware_upload
+192.168.1.12,2026-02-07T10:22:15Z,marketing@corp.com,443,text,Can we reschedule the brainstorming session to 3 PM?,benign,work_coordination
+23.11.55.9,2026-02-07T09:12:30Z,hr@corp.com,443,video,https://www.youtube.com/watch?v=TUvpL_Hx0is | Context: Corporate stock footage of people in a meeting room.,benign,safe_link
+66.249.77.11,2026-02-07T14:05:00Z,sales@corp.com,22,audio,https://www.youtube.com/watch?v=Xl0DUhuIh0A | [TRANSCRIPT]: 'IRS Scam Recording (Voicemail).',malicious,delivery_scam
+172.16.5.88,2026-02-07T11:22:00Z,hr@corp.com,443,link,https://linkedin.com/in/candidate-profile,benign,safe_link
+192.168.1.10,2026-02-07T09:00:00Z,admin@corp.com,443,link,https://vx-underground.org/Samples,malicious,credential_harvest
+88.22.11.4,2026-02-07T10:35:10Z,all@corp.com,993,text,URGENT: Your payroll details are incomplete. Click here to update or you will not be paid.,malicious,credential_harvest
+10.2.1.99,2026-02-07T11:50:00Z,hr@corp.com,443,link,https://workday.com/login,benign,safe_link
+12.34.56.78,2026-02-07T09:42:00Z,cfo@corp.com,53,link,https://datalake.abuse.ch/malware-bazaar/daily/,malicious,invoice_fraud
+10.0.0.88,2026-02-07T10:48:00Z,social@corp.com,443,link,https://spotify.com/playlist/focus-music,benign,safe_link
+99.11.22.33,2026-02-07T10:52:45Z,admin@corp.com,23,text,Telnet connection attempt from external IP. Blocked.,malicious,credential_harvest
+198.51.100.23,2026-02-07T11:07:00Z,finance@corp.com,25,text,Your payment failed. Update your credit card immediately: https://payment-update-secure.net/verify,malicious,credential_harvest
+10.5.2.1,2026-02-07T11:30:55Z,marketing@corp.com,443,image,logo_final_v2.png | OCR: 'Company Rebrand 2026',benign,safe_attachment
+192.168.0.99,2026-02-07T11:35:30Z,sales@corp.com,443,link,https://slack.com/archives/C12345,benign,safe_link
+172.16.5.99,2026-02-07T14:08:22Z,support@corp.com,8000,audio,https://www.youtube.com/watch?v=CFGLoQIhmow | [TRANSCRIPT]: 'Lo-Fi background music.',benign,safe_link
+45.33.22.11,2026-02-07T12:53:15Z,finance@corp.com,993,image,invoice_7721.png | OCR: 'CONFIDENTIAL: WIRE TRANSFER AUTH - SIGNATURE REQUIRED BY 5:00 PM',malicious,invoice_fraud
+44.55.66.77,2026-02-07T13:38:10Z,everyone@corp.com,587,text,HR Announcement: Significant changes to the 2026 Bonus Structure. Please review your new compensation plan immediately.,malicious,credential_harvest
+66.249.11.5,2026-02-07T13:05:00Z,it@corp.com,8080,link,http://freelist.virussign.com/freelist/,malicious,credential_harvest
+98.76.54.32,2026-02-07T13:48:00Z,user@corp.com,6667,link,http://freelist.virussign.com/freelist/,malicious,credential_harvest
+10.5.1.8,2026-02-07T13:08:12Z,marketing@corp.com,143,image,campaign_draft.jpg | OCR: 'Q1 Ad Campaign Mockup v3 - Approved',benign,safe_attachment
+10.50.2.22,2026-02-07T14:15:15Z,legal@corp.com,443,pdf,https://www.rd.usda.gov/sites/default/files/pdf-sample_0.pdf | Metadata: Official Government Form USDA,benign,safe_attachment
+192.168.1.66,2026-02-07T11:15:10Z,it@corp.com,22,text,Rebooting server rack 4.,benign,it_announcement
+185.22.11.9,2026-02-07T13:15:20Z,alice@corp.com,8000,audio,https://www.youtube.com/watch?v=CFGLoQIhmow | Transcript: 'Background music (Lofi Hip Hop Radio).',benign,safe_link
+172.16.5.99,2026-02-07T10:08:22Z,support@corp.com,8000,audio,https://www.youtube.com/watch?v=CFGLoQIhmow | [TRANSCRIPT]: 'Lo-Fi background music.',benign,safe_link
+10.0.0.44,2026-02-07T12:08:55Z,marketing@corp.com,443,image,social_media_plan.jpg | OCR: 'Q2 Content Calendar',benign,safe_attachment
+192.168.1.100,2026-02-07T10:12:10Z,qa@corp.com,443,pdf,https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf | Metadata: Standard W3C Test PDF,benign,safe_attachment
+10.1.1.1,2026-02-07T10:58:15Z,security@corp.com,443,link,https://nessus-scanner.local/report,benign,internal_update
+10.10.10.10,2026-02-07T09:45:45Z,security@corp.com,8443,text,The weekly vulnerability scan report is available on the Intranet dashboard.,benign,internal_update
+203.0.113.56,2026-02-07T11:16:00Z,user@corp.com,443,audio,voicemail_phishing.mp3 | Transcript: 'This is your bank. Your account has been compromised. Call 1-800-FAKE-BANK immediately.',malicious,credential_harvest
+104.21.88.9,2026-02-07T10:10:10Z,ceo@corp.com,443,video,https://www.youtube.com/watch?v=TUvpL_Hx0is | [AI SUMMARY]: Stock footage of business meeting.,benign,safe_link
+10.5.1.1,2026-02-07T10:38:00Z,devops@corp.com,22,text,SSH session established: user 'root',benign,internal_update
+101.44.22.1,2026-02-07T13:10:55Z,bob@corp.com,25,text,"Hi Bob, this is dispatch. Driver is at the dock but the manifesto is missing. Can you confirm the order number? He is waiting.",malicious,delivery_scam
+55.44.33.22,2026-02-07T10:45:15Z,finance@corp.com,443,pdf,https://fake-invoice-generator.com/download.php?id=992,malicious,invoice_fraud
+104.21.88.9,2026-02-07T14:10:10Z,ceo@corp.com,443,video,https://www.youtube.com/watch?v=TUvpL_Hx0is | [AI SUMMARY]: Stock footage of business meeting.,benign,safe_link
+101.44.22.1,2026-02-07T09:20:55Z,bob@corp.com,25,text,"Hi Bob, this is dispatch. Driver is at the dock but the manifesto is missing. Can you confirm the order number? He is waiting.",malicious,delivery_scam
+10.0.0.70,2026-02-07T11:22:00Z,it@corp.com,443,video,https://www.youtube.com/watch?v=training123 | [AI SUMMARY]: Security awareness training video.,benign,safe_link
+192.168.1.80,2026-02-07T11:24:00Z,support@corp.com,443,link,https://support.microsoft.com/en-us/help/12345,benign,safe_link
+23.44.55.66,2026-02-07T12:38:15Z,user@corp.com,25,text,You have 1 new voicemail from 'Unknown'. Click to listen.,malicious,delivery_scam
+203.0.113.78,2026-02-07T11:14:00Z,finance@corp.com,993,image,qr_code_phishing.png | OCR: 'Scan to claim your reward! Limited time offer!',malicious,credential_harvest
+98.76.54.11,2026-02-07T11:20:45Z,all@corp.com,80,link,http://fedex-tracking-update.com/login,malicious,delivery_scam
+172.16.5.66,2026-02-07T12:40:30Z,it@corp.com,443,link,https://zoom.us/j/123456789,benign,work_coordination
+88.77.66.55,2026-02-07T12:28:10Z,all@corp.com,80,link,http://cov1d-vaccine-bonus.com/register,malicious,credential_harvest
+198.51.100.156,2026-02-07T11:10:00Z,it@corp.com,25,text,Your package delivery failed. Reschedule here: https://delivery-reschedule-2024.com/track?ref=urgent,malicious,delivery_scam
+12.34.56.99,2026-02-07T11:38:45Z,security@corp.com,53,text,DNS Query: c2-server.evil.com (Known Botnet),malicious,malware_upload
+66.249.88.11,2026-02-07T12:10:10Z,user@corp.com,8080,link,http://free-minecraft-skins.com/download.exe,malicious,malware_upload
+192.168.1.5,2026-02-07T12:12:30Z,devops@corp.com,443,link,https://aws.amazon.com/console,benign,safe_link
+44.55.66.77,2026-02-07T09:48:10Z,everyone@corp.com,587,text,HR Announcement: Significant changes to the 2026 Bonus Structure. Please review your new compensation plan immediately.,malicious,credential_harvest
+192.168.1.200,2026-02-07T11:52:15Z,it@corp.com,80,text,Internal speed test: 500Mbps.,benign,it_announcement
+172.20.10.9,2026-02-07T10:55:00Z,support@corp.com,25,text,Ticket #9925: Mouse not working.,benign,support_ticket
+172.16.5.10,2026-02-07T11:19:00Z,all@corp.com,25,text,Reminder: Company holiday party is this Friday at 6 PM. RSVP by Wednesday.,benign,internal_update
+172.16.5.12,2026-02-07T11:58:45Z,dev@corp.com,443,text,Code review requested for module Auth.,benign,work_coordination
+45.33.22.11,2026-02-07T09:03:15Z,finance@corp.com,993,image,invoice_7721.png | OCR: 'CONFIDENTIAL: WIRE TRANSFER AUTH - SIGNATURE REQUIRED BY 5:00 PM',malicious,invoice_fraud
+12.99.88.77,2026-02-07T12:15:45Z,finance@corp.com,993,text,Wire Instructions changed. Please send to new bank details attached.,malicious,invoice_fraud
+10.0.0.7,2026-02-07T11:40:00Z,admin@corp.com,443,text,Weekly backup completed successfully.,benign,it_announcement
+10.0.0.99,2026-02-07T09:35:00Z,events@corp.com,993,image,holiday_party.png | OCR: 'You are invited! Annual Holiday Party - Friday 6 PM',benign,safe_attachment
+192.168.1.60,2026-02-07T11:21:00Z,hr@corp.com,993,image,company_logo.png | OCR: 'Corporate Brand Guidelines 2024',benign,safe_attachment
+10.0.0.55,2026-02-07T09:01:22Z,sarah.j@corp.com,587,text,Hey Sarah - checking in on the Q3 slide deck. Do you need help with the charts?,benign,work_coordination
+10.5.1.8,2026-02-07T09:18:12Z,marketing@corp.com,143,image,campaign_draft.jpg | OCR: 'Q1 Ad Campaign Mockup v3 - Approved',benign,safe_attachment
+198.51.100.45,2026-02-07T11:12:00Z,support@corp.com,80,link,http://free-gift-cards.net/claim?ref=phishing123,malicious,credential_harvest
+88.12.99.102,2026-02-07T12:58:45Z,ceo@corp.com,80,link,https://datalake.abuse.ch/malware-bazaar/daily/,malicious,invoice_fraud
+192.168.1.20,2026-02-07T09:10:10Z,devops@corp.com,22,link,https://github.com/org/repo/pull/402,benign,safe_link
+10.0.0.40,2026-02-07T11:20:00Z,marketing@corp.com,443,link,https://www.canva.com/design/abc123,benign,safe_link
+66.55.44.33,2026-02-07T11:00:30Z,user@corp.com,80,link,http://win-prize-iphone.com/claim,malicious,delivery_scam
+104.11.22.33,2026-02-07T11:55:30Z,user@corp.com,443,link,https://amazn-security-alert.com,malicious,credential_harvest
+104.22.33.1,2026-02-07T10:40:45Z,user1@corp.com,443,image,screenshot_error.png | OCR: 'Fatal Error: System Halted',benign,support_ticket
+88.12.99.102,2026-02-07T09:08:45Z,ceo@corp.com,80,link,https://datalake.abuse.ch/malware-bazaar/daily/,malicious,invoice_fraud
+10.0.0.22,2026-02-07T11:18:30Z,intern@corp.com,443,video,https://youtube.com/watch?v=lofi_beats,benign,safe_link
+45.11.22.33,2026-02-07T10:00:15Z,finance@corp.com,443,video,https://www.youtube.com/watch?v=Xl0DUhuIh0A | [AI SUMMARY]: Robocall detected. Automated voice claiming to be IRS tax enforcement.,malicious,invoice_fraud
+185.11.22.33,2026-02-07T11:05:00Z,legal@corp.com,443,link,https://docusign.com/verify/12345,benign,safe_link
+192.168.1.9,2026-02-07T10:42:30Z,user2@corp.com,8080,link,http://proxy-check.com/test,benign,safe_link
+185.22.11.9,2026-02-07T09:25:20Z,alice@corp.com,8000,audio,https://www.youtube.com/watch?v=CFGLoQIhmow | Transcript: 'Background music (Lofi Hip Hop Radio).',benign,safe_link
+10.2.3.4,2026-02-07T13:45:15Z,qa@corp.com,8080,text,Build 4022 passed all unit tests. Ready for deployment to Staging.,benign,dev_notification
+192.168.0.15,2026-02-07T11:02:45Z,manager@corp.com,443,text,Don't forget the lunch meeting at 12.,benign,work_coordination
+45.22.11.99,2026-02-07T12:32:40Z,cfo@corp.com,443,image,bank_statement.png | OCR: 'Chase Bank: Unusual Activity Detected',malicious,credential_harvest
+103.22.44.11,2026-02-07T10:18:45Z,finance@corp.com,80,txt,https://secure.eicar.org/eicar.com.txt | [ALERT]: File named 'Q4_Report.txt' but contains executable code signatures (EICAR).,malicious,malware_upload
+45.11.33.22,2026-02-07T12:02:20Z,ceo@corp.com,443,audio,https://voicemail-storage.com/msg-221.mp3 | Transcript: 'This is the FBI. You are under arrest unless you pay.',malicious,invoice_fraud
+10.2.1.5,2026-02-07T10:25:30Z,hr@corp.com,25,text,Please review the attached resume for the new developer role.,benign,work_coordination
+10.0.0.25,2026-02-07T11:17:00Z,team@corp.com,25,text,Team meeting scheduled for tomorrow at 2 PM in Conference Room A. Agenda attached.,benign,work_coordination
+192.168.1.30,2026-02-07T11:18:00Z,dev@corp.com,443,link,https://docs.google.com/spreadsheets/d/abc123/edit,benign,safe_link
+45.55.12.99,2026-02-07T10:28:45Z,cfo@corp.com,21,link,http://update-adobe-flash-secure.com/install.exe,malicious,malware_upload
+192.168.100.1,2026-02-07T13:40:00Z,manager@corp.com,22,link,https://trello.com/b/project-alpha,benign,safe_link
+172.20.10.4,2026-02-07T13:20:10Z,support@corp.com,8080,text,Ticket #9921: User cannot access VPN. Priority: Low.,benign,support_ticket
+66.249.11.5,2026-02-07T09:15:00Z,it@corp.com,8080,link,http://freelist.virussign.com/freelist/,malicious,credential_harvest
+10.2.3.4,2026-02-07T09:55:15Z,qa@corp.com,8080,text,Build 4022 passed all unit tests. Ready for deployment to Staging.,benign,dev_notification
+103.11.22.44,2026-02-07T12:22:35Z,admin@corp.com,23,text,Root login failed. IP banned.,benign,internal_update
+101.99.88.77,2026-02-07T11:32:10Z,user@corp.com,25,text,Your Netflix account is suspended. Update payment details now.,malicious,credential_harvest
+172.16.5.20,2026-02-07T11:23:00Z,finance@corp.com,25,text,Monthly financial report is ready for review. Please check the shared folder.,benign,work_coordination
+198.51.100.22,2026-02-07T14:20:00Z,dev@corp.com,443,pdf,https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf | Metadata: Technical Manual - PDF Bookmarks Sample,benign,safe_attachment
+103.22.44.11,2026-02-07T14:18:45Z,finance@corp.com,80,txt,https://secure.eicar.org/eicar.com.txt | [ALERT]: File named 'Q4_Report.txt' but contains executable code signatures (EICAR).,malicious,malware_upload
+192.0.2.67,2026-02-07T11:08:00Z,admin@corp.com,25,text,Microsoft Security Alert: Suspicious activity detected. Click here to secure your account: microsoft-security-verify.com,malicious,credential_harvest
+172.16.5.4,2026-02-07T12:55:00Z,all@corp.com,53,text,IT Alert: The printer on the 3rd floor is down for maintenance until Tuesday.,benign,it_announcement
+192.168.1.90,2026-02-07T12:35:00Z,marketing@corp.com,443,link,https://canva.com/design/123,benign,safe_link
+10.0.0.55,2026-02-07T12:51:22Z,sarah.j@corp.com,587,text,Hey Sarah - checking in on the Q3 slide deck. Do you need help with the charts?,benign,work_coordination
+192.168.1.10,2026-02-07T12:48:00Z,admin@corp.com,443,link,https://vx-underground.org/Samples,malicious,credential_harvest
+172.20.10.22,2026-02-07T12:18:00Z,support@corp.com,25,text,Ticket closed: User verified.,benign,support_ticket
+55.11.99.88,2026-02-07T11:25:20Z,finance@corp.com,21,file,ftp://ftp.unknown-host.ru/financial_data.zip,malicious,credential_harvest
+10.0.0.33,2026-02-07T12:30:25Z,dev@corp.com,443,text,Unit tests failed. Checking logs.,benign,dev_notification

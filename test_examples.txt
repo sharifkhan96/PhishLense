@@ -1,0 +1,563 @@
+# ============================================
+# PhishLense Test Examples
+# ============================================
+
+# ============================================
+# TEXT EXAMPLES
+# ============================================
+
+# NORMAL TEXT
+Normal Text Example:
+"Hi John, can we schedule a meeting for tomorrow at 2 PM? Let me know your availability. Thanks!"
+
+# MALICIOUS TEXT
+Malicious Text Example:
+"URGENT! Your account has been suspended. Click immediately to verify: http://bit.ly/verify-account-now or your account will be permanently closed within 24 hours. This is your final warning!"
+
+# ============================================
+# LINK EXAMPLES
+# ============================================
+
+# NORMAL LINK
+Normal Link:
+https://www.example.com/api/health
+
+# MALICIOUS LINK
+Malicious Link:
+http://bit.ly/fake-bank-login-verify-urgent
+
+# ============================================
+# CURL TRAFFIC EXAMPLES - NORMAL
+# ============================================
+
+# 1. Normal API Request
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "192.168.1.10",
+    "destination_ip": "10.0.0.1",
+    "port": 443,
+    "payload": "GET /api/v1/users HTTP/1.1\nHost: api.example.com\nUser-Agent: Mozilla/5.0",
+    "payload_type": "text",
+    "organization": "test-org"
+  }'
+
+# 2. Normal Email Communication
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "192.168.1.50",
+    "destination_ip": "colleague@company.com",
+    "port": 587,
+    "payload": "Hi, can we schedule a meeting for tomorrow? Let me know your availability.",
+    "payload_type": "text",
+    "organization": "test-org"
+  }'
+
+# 3. Normal Web Request
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "10.0.0.5",
+    "destination_ip": "api.example.com",
+    "port": 443,
+    "payload": "GET /health HTTP/1.1\nHost: api.example.com\nUser-Agent: Mozilla/5.0",
+    "payload_type": "text",
+    "organization": "test-org"
+  }'
+
+# 4. Normal Link Access
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "192.168.1.20",
+    "destination_ip": "www.example.com",
+    "port": 443,
+    "payload": "https://www.example.com/api/health",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# ============================================
+# CURL TRAFFIC EXAMPLES - MALICIOUS
+# ============================================
+
+# 1. Phishing Email - Urgent Action Required
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "172.16.0.50",
+    "destination_ip": "admin@company.com",
+    "port": 587,
+    "payload": "ALERT: Action required! Your account will be closed in 24 hours. Update your information immediately at https://suspicious-site-123.com/login?verify=urgent",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 2. Phishing with Short URL
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "10.0.0.100",
+    "destination_ip": "user@example.com",
+    "port": 80,
+    "payload": "Secure your account now! Visit: http://bit.ly/secure-now or go to 192.168.1.1/verify",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 3. Prize Scam Phishing
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "203.0.113.45",
+    "destination_ip": "victim@email.com",
+    "port": 443,
+    "payload": "Congratulations! You are a winner! Claim your prize now: http://fake-bank-login.com/secure/verify?id=12345",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 4. Urgent Verification Phishing
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "192.168.1.100",
+    "destination_ip": "user@company.com",
+    "port": 25,
+    "payload": "URGENT! Your account has been suspended. Click immediately to verify: http://bit.ly/verify-account-now",
+    "payload_type": "text",
+    "organization": "test-org"
+  }'
+
+# 5. Credential Harvesting
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "203.0.113.100",
+    "destination_ip": "admin@company.com",
+    "port": 443,
+    "payload": "Your password has expired. Click to reset: https://fake-bank-security.com/reset?token=abc123",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 6. Brand Impersonation Phishing
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "172.16.0.75",
+    "destination_ip": "customer@email.com",
+    "port": 25,
+    "payload": "Amazon: Your order cannot be processed. Verify payment: http://amazon-verify-account.com/login",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 7. Social Engineering Phishing
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "10.0.0.200",
+    "destination_ip": "employee@company.com",
+    "port": 587,
+    "payload": "HR Department: Your employment status requires immediate attention. Click to update: https://company-hr-verify.com/urgent",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 8. Suspicious Port Phishing
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "192.168.1.200",
+    "destination_ip": "employee@company.com",
+    "port": 8080,
+    "payload": "VERIFY your account immediately! Limited time offer. Update now: http://goo.gl/fake-verify-link",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# ============================================
+# QUICK COPY-PASTE COMMANDS
+# ============================================
+
+# Test Normal Traffic (copy and run):
+curl -X POST http://localhost:8000/api/traffic/receive/ -H "Content-Type: application/json" -d '{"source_ip": "192.168.1.10", "destination_ip": "10.0.0.1", "port": 443, "payload": "GET /api/v1/users HTTP/1.1", "payload_type": "text", "organization": "test-org"}'
+
+# Test Malicious Traffic (copy and run):
+curl -X POST http://localhost:8000/api/traffic/receive/ -H "Content-Type: application/json" -d '{"source_ip": "172.16.0.50", "destination_ip": "admin@company.com", "port": 587, "payload": "URGENT! Your account has been suspended. Click immediately to verify: http://bit.ly/verify-account-now", "payload_type": "link", "organization": "test-org"}'
+
+# ============================================
+# MEDIA ANALYSIS EXAMPLES - TEXT
+# ============================================
+
+# NORMAL TEXT EXAMPLES FOR MEDIA ANALYSIS:
+
+Normal Text 1:
+"Hi team, I wanted to follow up on our project discussion from yesterday. Can we schedule a meeting for next week to review the progress? Please let me know your availability."
+
+Normal Text 2:
+"Thank you for your interest in our product. We have received your inquiry and will get back to you within 24-48 hours. Our team is here to help with any questions you may have."
+
+Normal Text 3:
+"Meeting Reminder: Our quarterly review meeting is scheduled for Friday, February 15th at 2:00 PM in Conference Room A. Please prepare your status reports in advance."
+
+Normal Text 4:
+"Your order #12345 has been shipped! You can track your package using the tracking number: 1Z999AA10123456784. Expected delivery: February 12, 2024."
+
+Normal Text 5:
+"We are pleased to inform you that your application has been received. Our team will review it and contact you within 5-7 business days with an update."
+
+# MALICIOUS TEXT EXAMPLES FOR MEDIA ANALYSIS:
+
+Malicious Text 1:
+"URGENT SECURITY ALERT! Your account has been compromised. Immediate action required! Click here NOW to secure your account: http://bit.ly/secure-account-urgent or your account will be permanently deleted within 24 hours. This is your FINAL WARNING!"
+
+Malicious Text 2:
+"CONGRATULATIONS! You have won $1,000,000 in our international lottery! To claim your prize, you must verify your identity immediately by clicking: https://lottery-claim-winner.com/verify?code=WIN123456. Limited time offer - claim within 48 hours!"
+
+Malicious Text 3:
+"IRS TAX REFUND NOTICE: You are eligible for a $2,500 tax refund! Click here to claim your refund now: http://irs-tax-refund-claim.com/verify?ref=TAX2024. Failure to claim within 72 hours will result in forfeiture."
+
+Malicious Text 4:
+"PayPal Security Alert: Unusual activity detected on your account. Your account has been temporarily suspended. Verify your identity immediately: https://paypal-verify-security.com/login?alert=urgent or your account will be permanently closed."
+
+Malicious Text 5:
+"Microsoft Tech Support: Your computer has been infected with a virus! Immediate action required. Call 1-800-XXX-XXXX now or click: http://microsoft-support-urgent.com/fix-virus to remove the threat before your data is stolen."
+
+Malicious Text 6:
+"Bank Security Alert: Suspicious transaction detected on your credit card ending in 1234. Verify this transaction immediately: https://bank-verify-transaction.com/secure?card=1234 or your card will be blocked permanently."
+
+Malicious Text 7:
+"Amazon Order Issue: Your recent order cannot be processed due to payment failure. Update your payment method immediately: http://amazon-payment-update.com/urgent?order=ABC123 or your order will be cancelled."
+
+Malicious Text 8:
+"Social Security Administration: Your benefits have been suspended due to suspicious activity. Verify your identity now: https://ssa-verify-benefits.com/secure?ssn=XXX-XX-XXXX to restore your benefits."
+
+# ============================================
+# MEDIA ANALYSIS EXAMPLES - LINKS
+# ============================================
+
+# NORMAL LINKS FOR MEDIA ANALYSIS:
+
+Normal Link 1:
+https://www.example.com/api/health
+
+Normal Link 2:
+https://docs.example.com/getting-started
+
+Normal Link 3:
+https://github.com/example/repository
+
+Normal Link 4:
+https://www.wikipedia.org/wiki/Security
+
+Normal Link 5:
+https://stackoverflow.com/questions/tagged/security
+
+# MALICIOUS LINKS FOR MEDIA ANALYSIS:
+
+Malicious Link 1:
+http://bit.ly/verify-account-urgent-now
+
+Malicious Link 2:
+https://fake-bank-login.com/secure/verify?id=abc123
+
+Malicious Link 3:
+http://tinyurl.com/claim-prize-winner-2024
+
+Malicious Link 4:
+https://paypal-verify-security-alert.com/login?token=xyz789
+
+Malicious Link 5:
+http://goo.gl/fake-microsoft-support-fix
+
+Malicious Link 6:
+https://amazon-payment-update-urgent.com/verify?order=12345
+
+Malicious Link 7:
+http://bit.ly/irs-tax-refund-claim-now
+
+Malicious Link 8:
+https://bank-security-verify.com/login?alert=critical&card=1234
+
+Malicious Link 9:
+http://lottery-winner-claim.com/verify?code=LOTTO2024
+
+Malicious Link 10:
+https://microsoft-account-verify-urgent.com/secure?alert=compromised
+
+# ============================================
+# MEDIA ANALYSIS API EXAMPLES
+# ============================================
+
+# Test Text Analysis - Normal (via Media Analysis API):
+# Use the frontend Media Analysis form or API:
+# POST /api/media/
+# {
+#   "media_type": "text",
+#   "text_content": "Hi team, I wanted to follow up on our project discussion from yesterday. Can we schedule a meeting for next week?"
+# }
+
+# Test Text Analysis - Malicious (via Media Analysis API):
+# POST /api/media/
+# {
+#   "media_type": "text",
+#   "text_content": "URGENT! Your account has been suspended. Click immediately to verify: http://bit.ly/verify-account-now"
+# }
+
+# Test Image Analysis (via Media Analysis API):
+# POST /api/media/
+# Form data with file upload:
+# - media_type: "image"
+# - file: [upload image file]
+
+# Test Audio Analysis (via Media Analysis API):
+# POST /api/media/
+# Form data with file upload:
+# - media_type: "audio"
+# - file: [upload audio file]
+
+# Test Video Analysis (via Media Analysis API):
+# POST /api/media/
+# Form data with file upload:
+# - media_type: "video"
+# - file: [upload video file]
+
+# ============================================
+# ADDITIONAL MALICIOUS EXAMPLES
+# ============================================
+
+# 11. PayPal Phishing Scam
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "198.51.100.50",
+    "destination_ip": "customer@email.com",
+    "port": 443,
+    "payload": "PayPal Security Alert: Unusual activity detected. Verify your account immediately: https://paypal-verify-security.com/login?id=urgent123",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 12. Microsoft Account Phishing
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "203.0.113.75",
+    "destination_ip": "user@outlook.com",
+    "port": 25,
+    "payload": "Microsoft: Your account will be locked in 48 hours. Click here to verify: http://microsoft-account-verify.com/secure",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 13. Tax Refund Scam
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "10.0.0.150",
+    "destination_ip": "taxpayer@email.com",
+    "port": 587,
+    "payload": "IRS Tax Refund: You are eligible for $2,500 refund! Claim now: http://irs-refund-claim.com/verify?code=TAX2024",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 14. Netflix Account Suspension
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "192.168.1.150",
+    "destination_ip": "subscriber@email.com",
+    "port": 443,
+    "payload": "Netflix: Your subscription has been suspended due to payment issue. Update payment: https://netflix-payment-update.com/urgent",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 15. Bank Account Verification
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "172.16.0.100",
+    "destination_ip": "account-holder@bank.com",
+    "port": 443,
+    "payload": "Bank Security Alert: Suspicious login attempt detected. Verify your identity: http://bank-verify-security.com/login?token=abc123xyz",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 16. Social Media Account Hack Warning
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "203.0.113.200",
+    "destination_ip": "user@social.com",
+    "port": 25,
+    "payload": "URGENT: Someone tried to access your account from a new device. Secure it now: http://bit.ly/secure-account-now",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 17. Package Delivery Scam
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "198.51.100.75",
+    "destination_ip": "customer@email.com",
+    "port": 587,
+    "payload": "DHL: Package delivery failed. Pay shipping fee to receive: http://dhl-payment-required.com/pay?tracking=123456",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 18. Crypto Investment Scam
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "10.0.0.250",
+    "destination_ip": "investor@email.com",
+    "port": 443,
+    "payload": "Bitcoin Investment Opportunity: Double your money in 24 hours! Limited time: http://crypto-invest-now.com/signup",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 19. Government Grant Scam
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "192.168.1.250",
+    "destination_ip": "citizen@email.com",
+    "port": 25,
+    "payload": "Government Grant Available: You qualify for $10,000 grant. Claim now: http://gov-grant-claim.com/apply?code=GRANT2024",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 20. Tech Support Scam
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "172.16.0.200",
+    "destination_ip": "user@computer.com",
+    "port": 443,
+    "payload": "Microsoft Tech Support: Your computer has a virus! Call immediately or click: http://microsoft-support-urgent.com/fix",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 21. Lottery Winner Scam
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "203.0.113.150",
+    "destination_ip": "winner@email.com",
+    "port": 587,
+    "payload": "Congratulations! You won $1,000,000 in the lottery! Claim your prize: http://lottery-claim-prize.com/verify?code=LOTTO123",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 22. Job Offer Scam
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "198.51.100.125",
+    "destination_ip": "jobseeker@email.com",
+    "port": 25,
+    "payload": "Job Offer: $5,000/week work from home opportunity! Apply now: http://work-from-home-job.com/apply?ref=JOB2024",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 23. Credit Card Fraud Alert
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "10.0.0.175",
+    "destination_ip": "cardholder@bank.com",
+    "port": 443,
+    "payload": "Credit Card Alert: Unauthorized transaction detected. Verify your card: http://card-verify-security.com/login?alert=urgent",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 24. Dating Site Scam
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "192.168.1.175",
+    "destination_ip": "user@dating.com",
+    "port": 587,
+    "payload": "Someone viewed your profile! Upgrade to premium to see who: http://dating-premium-upgrade.com/subscribe?promo=50off",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# 25. Charity Donation Scam
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "172.16.0.175",
+    "destination_ip": "donor@email.com",
+    "port": 443,
+    "payload": "Emergency: Help children in need. Donate now and make a difference: http://charity-donate-urgent.com/donate?cause=children",
+    "payload_type": "link",
+    "organization": "test-org"
+  }'
+
+# ============================================
+# ADDITIONAL NORMAL EXAMPLES
+# ============================================
+
+# 12. Normal Newsletter Subscription
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "192.168.1.30",
+    "destination_ip": "newsletter@company.com",
+    "port": 587,
+    "payload": "Thank you for subscribing to our newsletter. You will receive updates about our latest products and services.",
+    "payload_type": "text",
+    "organization": "test-org"
+  }'
+
+# 13. Normal API Health Check
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "10.0.0.10",
+    "destination_ip": "api.service.com",
+    "port": 443,
+    "payload": "GET /health HTTP/1.1\nHost: api.service.com\nAccept: application/json",
+    "payload_type": "text",
+    "organization": "test-org"
+  }'
+
+# 14. Normal Business Email
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "192.168.1.40",
+    "destination_ip": "partner@business.com",
+    "port": 587,
+    "payload": "Hi, I wanted to follow up on our meeting from last week. Please let me know when you are available for a call.",
+    "payload_type": "text",
+    "organization": "test-org"
+  }'
+
+# 15. Normal Documentation Request
+curl -X POST http://localhost:8000/api/traffic/receive/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source_ip": "10.0.0.15",
+    "destination_ip": "support@company.com",
+    "port": 25,
+    "payload": "Could you please send me the user manual for the product? I need it for training purposes.",
+    "payload_type": "text",
+    "organization": "test-org"
+  }'
+
