@@ -157,3 +157,7 @@ This is a hackathon MVP. The sandbox environment is simplified for demonstration
 
 See `SETUP.md` for detailed setup instructions.
 
+
+<img width="1805" height="1020" alt="prdouct" src="https://github.com/user-attachments/assets/6041e847-f9af-42ea-bbf6-0b3f459a85f2" />
+
+
