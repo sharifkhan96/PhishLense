@@ -158,6 +158,18 @@ This is a hackathon MVP. The sandbox environment is simplified for demonstration
 See `SETUP.md` for detailed setup instructions.
 
 
-<img width="1805" height="1020" alt="prdouct" src="https://github.com/user-attachments/assets/6041e847-f9af-42ea-bbf6-0b3f459a85f2" />
+<img width="1805" height="1020" alt="prdouct" src="https://github.com/user-attachments/assets/e2626c41-17d6-4487-ac02-04f5b3a03a49" />
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+<img width="1708" height="1007" alt="cgpt4" src="https://github.com/user-attachments/assets/8a16b9f1-2605-4208-8706-650e4a0fa5a1" />
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+<img width="1708" height="1007" alt="ml model" src="https://github.com/user-attachments/assets/f6d312fe-b6df-4071-bcc9-f3c1b85618cf" />
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+<img width="1863" height="1042" alt="real attack" src="https://github.com/user-attachments/assets/7b681bc0-f302-4b13-9ccb-26a36010c117" />
 
 
